@@ -1,0 +1,18 @@
+[solnet-angular-sticky-table-header] {
+  &.solnet-angular-sticky-table-header__clone {
+    position: fixed;
+    top: 0;
+    display: none;
+    border-left: 1px solid #cfcfcf;
+    overflow: hidden;
+
+    &.solnet-angular-sticky-table-header__clone--visible {
+      display: inline;
+    }
+  }
+
+  &.solnet-angular-sticky-table-header__original {
+    opacity: 0;
+  }
+}
+
