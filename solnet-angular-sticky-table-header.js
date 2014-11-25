@@ -15,16 +15,16 @@
                         var options = solnetAngularStickyTableHeaderOptions;
 
                         angular.extend(scope, {
-                            thead: $(element).find('> :first-child'),
-                            table: $(element),
+                            thead: element.find('> :first-child'),
+                            table: element,
                             clone: null,
 
                             initialise: function() {
-                                $($window).bind('scroll', scope.scroll);
+                                angular.element($window).bind('scroll', scope.scroll);
                             },
 
                             scroll: function(event) {
-                                var scrollTop = $($window).scrollTop();
+                                var scrollTop = angular.element($window).scrollTop();
 
                                 if (!scope.thead.hasClass(options.STICKY) && scrollTop > scope.table.offset().top) {
                                     scope.stick();
@@ -66,15 +66,15 @@
 
                             styleClone: function() {
                                 th = scope.thead.find('th');
-                                scope.clone.find('th').each(function(thCloneIndex, thClone) {
-                                    $(thClone).css({
-                                        width: $(th.get(thCloneIndex)).width()
+                                angular.forEach(scope.clone.find('th'), function(thClone, thCloneIndex) {
+                                    angular.element(thClone).css({
+                                            width: angular.element(th.get(thCloneIndex)).width()
                                     });
                                 });
                             },
 
                             destroy: function() {
-                                $($window).off(scope.scroll);
+                                angular.element($window).off(scope.scroll);
                             }
                         });
 
