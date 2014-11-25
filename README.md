@@ -1,5 +1,7 @@
 # solnet-angular-sticky-table-header
 
+A directive that provides a very basic implementation of a "sticky header" for HTML tables. Designed to work in IE9+.
+
 ## Dependencies
 
  - angularjs
