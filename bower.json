@@ -1,0 +1,18 @@
+{
+  "name": "solnet-angular-sticky-table-header",
+  "main": "solnet-angular-sticky-table-header.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/solnetdigital/solnet-angular-sticky-table-header",
+  "authors": [
+    "michael.robinson@solnet.co.nz"
+  ],
+  "description": "Sticky table header directive for Angular JS. Intended to work in IE9+",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
