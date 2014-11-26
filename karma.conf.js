@@ -7,7 +7,6 @@ module.exports = function(config) {
                 'src/solnet-angular-sticky-table-header.js',
                 'test/unit/**/*.js'
         ],
-        autoWatch: true,
         browsers: ['PhantomJS'],
         frameworks: ['jasmine'],
         reporters: ['progress', 'coverage'],
