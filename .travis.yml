@@ -5,4 +5,4 @@ before_install:
   - npm install -g bower
   - bower install
 before_script:
- - npm run test-single-run
+ - node_modules/.bin/karma start karma.conf.js --no-auto-watch --single-run
