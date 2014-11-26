@@ -8,14 +8,14 @@ module.exports = function(config) {
             'test/unit/**/*.js'
         ],
         autoWatch: true,
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         frameworks: ['jasmine'],
         reporters: ['progress', 'coverage'],
         preprocessors: {
             'src/**/*.js': ['coverage']
         },
         plugins: [
-            'karma-chrome-launcher',
+            'karma-phantomjs-launcher',
             'karma-coverage',
             'karma-jasmine',
             'karma-junit-reporter'

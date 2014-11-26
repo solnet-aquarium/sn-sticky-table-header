@@ -2,7 +2,7 @@
   "devDependencies": {
     "jasmine": "",
     "karma": "",
-    "karma-chrome-launcher": "",
+    "karma-phantomjs-launcher": "",
     "karma-coverage": "",
     "karma-jasmine": "",
     "karma-junit-reporter": ""
