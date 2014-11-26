@@ -1,4 +1,4 @@
-# solnet-angular-sticky-table-header [![Build Status](https://travis-ci.org/solnetdigital/solnet-angular-sticky-table-header.svg)](https://travis-ci.org/solnetdigital/solnet-angular-sticky-table-header.svg)
+# solnet-angular-sticky-table-header [![Build Status](https://travis-ci.org/solnetdigital/solnet-angular-sticky-table-header.svg?branch=master)](https://travis-ci.org/solnetdigital/solnet-angular-sticky-table-header)
 
 A directive that provides a very basic implementation of a "sticky header" for HTML tables. Designed to work in IE9+, and all the proper browsers.
 
