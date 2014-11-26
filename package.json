@@ -10,7 +10,7 @@
   "scripts": {
     "pretest": "npm install",
     "test": "node_modules/karma/bin/karma start karma.conf.js --no-auto-watch --single-run --reporters dots",
-    "test-watch": "node_modules/karma/bin/karma start karma.conf.js",
+    "test-watch": "node_modules/karma/bin/karma start karma.conf.js --auto-watch",
     "test-single-run": "node_modules/karma/bin/karma start karma.conf.js  --single-run"
   }
 }
