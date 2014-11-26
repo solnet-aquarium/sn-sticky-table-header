@@ -1,7 +1,7 @@
 {
   "name": "solnet-angular-sticky-table-header",
-  "main": "solnet-angular-sticky-table-header.js",
-  "version": "0.0.1",
+  "main": "src/solnet-angular-sticky-table-header.js",
+  "version": "0.0.3",
   "homepage": "https://github.com/solnetdigital/solnet-angular-sticky-table-header",
   "authors": [
     "michael.robinson@solnet.co.nz"
@@ -14,5 +14,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "jquery": "",
+    "angular": "",
+    "angular-mocks": ""
+  }
 }
