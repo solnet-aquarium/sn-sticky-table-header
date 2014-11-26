@@ -1,11 +1,6 @@
 /*jshint loopfunc: true */
 (function() {
 
-    function getDocumentScrollTop(doc) {
-        // doc.body.scrollTop is IE quirkmode only
-        return Math.max(doc.documentElement.scrollTop, doc.body.scrollTop);
-    }
-
     angular.module('solnetAngularStickyTableHeader', [])
         .value('solnetAngularStickyTableHeaderOptions', {
             STICKY: 'solnet-angular-sticky-table-header__original',
@@ -25,20 +20,17 @@
                             clone: null,
 
                             initialise: function() {
-                                console.log($window);
-                                return;
                                 angular.element($window).bind('scroll', scope.scroll);
                             },
 
-                            scroll: function() {
-                                console.log('here')
-                                var scrollTop = getDocumentScrollTop($document); //;angular.element($window).scrollTop();
+                            scroll: function(event) {
+                                var scrollTop = angular.element($window).scrollTop();
 
                                 if (!scope.thead.hasClass(options.STICKY) && scrollTop > scope.table.offset().top) {
                                     scope.stick();
                                 }
 
-                                if (scope.thead.hasClass(options.STICKY) && scrollTop < scope.table.offset().top) {
+                                if (scope.thead.hasClass(options.STICKY) && scrollTop <= scope.table.offset().top) {
                                     scope.unstick();
                                 }
 
@@ -48,18 +40,7 @@
                             stick: function() {
 
                                 if (scope.clone === null) {
-                                    var table = scope.table,
-                                        clone = scope.table.clone(true, true);
-
-                                    clone.find('tbody').remove();
-                                    clone.css({
-                                        width: table.width(),
-                                        left: table.offset().left,
-                                        height: 'auto'
-                                    });
-
-                                    scope.clone = clone;
-                                    table.after(clone);
+                                    scope.cloneTable();
                                 }
 
                                 scope.styleClone();
@@ -70,6 +51,21 @@
                             unstick: function() {
                                 scope.thead.removeClass(options.STICKY);
                                 scope.clone.removeClass(options.CLONE_VISIBLE);
+                            },
+
+                            cloneTable: function() {
+                                var table = scope.table,
+                                    clone = scope.table.clone(true, true);
+
+                                clone.find('tbody').remove();
+                                clone.css({
+                                    width: table.width(),
+                                    left: table.offset().left,
+                                    height: 'auto'
+                                });
+
+                                scope.clone = clone;
+                                table.after(clone);
                             },
 
                             styleClone: function() {
