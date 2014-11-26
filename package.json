@@ -11,12 +11,6 @@
     "pretest": "npm install",
     "test": "node_modules/karma/bin/karma start karma.conf.js",
     "test-single-run": "node_modules/karma/bin/karma start karma.conf.js  --single-run",
-
-    "preupdate-webdriver": "npm install --proxy http://192.168.146:8080",
-    "update-webdriver": "webdriver-manager update --proxy http://192.168.146:8080",
-
-    "preprotractor": "npm run update-webdriver",
-    "protractor": "node_modules/protractor/bin/protractor app/assets/javascripts/test/e2e/protractor.conf.js"
   }
 }
 
