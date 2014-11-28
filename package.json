@@ -1,17 +1,16 @@
 {
   "devDependencies": {
-    "jasmine": "",
-    "karma": "",
-    "karma-phantomjs-launcher": "",
-    "karma-coverage": "",
-    "karma-jasmine": "",
-    "karma-junit-reporter": ""
+    "jasmine": "^2.1.0",
+    "karma": "^0.12.28",
+    "karma-coverage": "^0.2.6",
+    "karma-jasmine": "^0.3.1",
+    "karma-junit-reporter": "^0.2.2",
+    "karma-phantomjs-launcher": "^0.1.4"
   },
   "scripts": {
-    "pretest": "npm install",
+    "pretest": "npm install && bower install",
     "test": "node_modules/karma/bin/karma start karma.conf.js --no-auto-watch --single-run --reporters dots",
     "test-watch": "node_modules/karma/bin/karma start karma.conf.js --auto-watch",
     "test-single-run": "node_modules/karma/bin/karma start karma.conf.js  --single-run"
   }
 }
-
