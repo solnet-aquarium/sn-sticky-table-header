@@ -1,4 +1,4 @@
-angular.module('solnetAngularStickyTableHeaderApp', ['solnetAngularStickyTableHeader']);
+angular.module('snStickyTableHeaderApp', ['snStickyTableHeader']);
 
 describe('Solnet Angular Sticky Table Header', function() {
     var options = {
@@ -19,21 +19,21 @@ describe('Solnet Angular Sticky Table Header', function() {
         off: function() {}
     };
 
-    beforeEach(module('solnetAngularStickyTableHeaderApp'));
+    beforeEach(module('snStickyTableHeaderApp'));
 
     beforeEach(function() {
         module(function($provide) {
-            $provide.value('solnetAngularStickyTableHeaderOptions', options);
+            $provide.value('snStickyTableHeaderOptions', options);
         });
     });
 
-    beforeEach(module('solnetAngularStickyTableHeader'));
+    beforeEach(module('snStickyTableHeader'));
 
-    beforeEach(inject(function($rootScope, $compile, _$window_, _solnetAngularStickyTableHeaderOptions_) {
+    beforeEach(inject(function($rootScope, $compile, _$window_, _snStickyTableHeaderOptions_) {
         $window = _$window_;
         scope = $rootScope.$new();
 
-        element = '<table solnet-angular-sticky-table-header><thead><tr><th>heading</th></tr></thead><tbody><tr><td>cell</td></tr></tbody></table>';
+        element = '<table sn-sticky-table-header><thead><tr><th>heading</th></tr></thead><tbody><tr><td>cell</td></tr></tbody></table>';
 
         element = $compile(element)(scope);
         scope.$digest();

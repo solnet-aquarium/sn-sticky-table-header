@@ -4,7 +4,7 @@ module.exports = function(config) {
                 'bower_components/jquery/dist/jquery.js',
                 'bower_components/angular/angular.js',
                 'bower_components/angular-mocks/angular-mocks.js',
-                'src/solnet-angular-sticky-table-header.js',
+                'src/sn-sticky-table-header.js',
                 'test/unit/**/*.js'
         ],
         browsers: ['PhantomJS'],
