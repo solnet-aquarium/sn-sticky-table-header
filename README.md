@@ -1,4 +1,4 @@
-# -sticky-table-header 
+# sn-sticky-table-header 
 
 [![Build Status](https://travis-ci.org/solnetdigital/solnet-angular-sticky-table-header.svg?branch=master)](https://travis-ci.org/solnetdigital/solnet-angular-sticky-table-header) [![Code Climate](https://codeclimate.com/github/solnetdigital/solnet-angular-sticky-table-header/badges/gpa.svg)](https://codeclimate.com/github/solnetdigital/solnet-angular-sticky-table-header) [![Test Coverage](https://codeclimate.com/github/solnetdigital/solnet-angular-sticky-table-header/badges/coverage.svg)](https://codeclimate.com/github/solnetdigital/solnet-angular-sticky-table-header)
 
@@ -30,5 +30,5 @@ A directive that provides a very basic implementation of a "sticky header" for H
 ### JS
 
 ```JavaScript
-angular.module('yourApp', ['solnetAngularStickyTableHeader']);
+angular.module('yourApp', ['snStickyTableHeader']);
 ```
