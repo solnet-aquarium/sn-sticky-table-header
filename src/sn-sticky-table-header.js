@@ -1,18 +1,18 @@
 /*jshint loopfunc: true */
 (function() {
 
-    angular.module('solnetAngularStickyTableHeader', [])
-        .value('solnetAngularStickyTableHeaderOptions', {
-            STICKY: 'solnet-angular-sticky-table-header__original',
-            CLONE: 'solnet-angular-sticky-table__clone',
-            CLONE_VISIBLE: 'solnet-angular-sticky-table__clone--visible'
+    angular.module('snStickyTableHeader', [])
+        .value('snStickyTableHeaderOptions', {
+            STICKY: 'sn-sticky-table-header__original',
+            CLONE: 'sn-sticky-table__clone',
+            CLONE_VISIBLE: 'sn-sticky-table__clone--visible'
         })
-        .directive('solnetAngularStickyTableHeader', ['$window', 'solnetAngularStickyTableHeaderOptions',
-            function($window, solnetAngularStickyTableHeaderOptions) {
+        .directive('snStickyTableHeader', ['$window', 'snStickyTableHeaderOptions',
+            function($window, snStickyTableHeaderOptions) {
                 return {
                     restrict: 'A',
                     link: function(scope, element, attributes) {
-                        var options = solnetAngularStickyTableHeaderOptions;
+                        var options = snStickyTableHeaderOptions;
 
                         angular.extend(scope, {
                             thead: element.find('> :first-child'),

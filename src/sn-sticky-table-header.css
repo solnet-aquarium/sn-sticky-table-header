@@ -1,0 +1,12 @@
+[sn-sticky-table-header].sn-sticky-table__clone {
+  position: fixed;
+  top: 0;
+  display: none;
+}
+[sn-sticky-table-header].sn-sticky-table__clone.sn-sticky-table__clone--visible {
+  display: table;
+}
+[sn-sticky-table-header].sn-sticky-table-header__original {
+  opacity: 0;
+}
+
