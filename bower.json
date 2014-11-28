@@ -1,8 +1,8 @@
 {
-  "name": "solnet-angular-sticky-table-header",
-  "main": "src/solnet-angular-sticky-table-header.js",
+  "name": "sn-sticky-table-header",
+  "main": "src/sn-sticky-table-header.js",
   "version": "0.0.3",
-  "homepage": "https://github.com/solnetdigital/solnet-angular-sticky-table-header",
+  "homepage": "https://github.com/solnetdigital/sn-sticky-table-header",
   "authors": [
     "michael.robinson@solnet.co.nz"
   ],
