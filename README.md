@@ -1,6 +1,8 @@
 # sn-sticky-table-header
 
-[![Build Status](https://travis-ci.org/solnetdigital/sn-sticky-table-header.svg?branch=master)](https://travis-ci.org/solnetdigital/sn-sticky-table-header) [![Code Climate](https://codeclimate.com/github/solnetdigital/sn-sticky-table-header/badges/gpa.svg)](https://codeclimate.com/github/solnetdigital/sn-sticky-table-header) [![Test Coverage](https://codeclimate.com/github/solnetdigital/sn-sticky-table-header/badges/coverage.svg)](https://codeclimate.com/github/solnetdigital/sn-sticky-table-header)
+[![Build Status](https://travis-ci.org/solnetdigital/sn-sticky-table-header.svg?branch=master)](https://travis-ci.org/solnetdigital/sn-sticky-table-header)
+[![Code Climate](https://codeclimate.com/github/solnetdigital/sn-sticky-table-header/badges/gpa.svg)](https://codeclimate.com/github/solnetdigital/sn-sticky-table-header) 
+[![Test Coverage](https://codeclimate.com/github/solnetdigital/sn-sticky-table-header/badges/coverage.svg)](https://codeclimate.com/github/solnetdigital/sn-sticky-table-header)
 
 A directive that provides a very basic implementation of a "sticky header" for HTML tables. Designed to work in IE9+, and all the proper browsers.
 
