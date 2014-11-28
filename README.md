@@ -1,4 +1,4 @@
-# solnet-angular-sticky-table-header 
+# -sticky-table-header 
 
 [![Build Status](https://travis-ci.org/solnetdigital/solnet-angular-sticky-table-header.svg?branch=master)](https://travis-ci.org/solnetdigital/solnet-angular-sticky-table-header) [![Code Climate](https://codeclimate.com/github/solnetdigital/solnet-angular-sticky-table-header/badges/gpa.svg)](https://codeclimate.com/github/solnetdigital/solnet-angular-sticky-table-header) [![Test Coverage](https://codeclimate.com/github/solnetdigital/solnet-angular-sticky-table-header/badges/coverage.svg)](https://codeclimate.com/github/solnetdigital/solnet-angular-sticky-table-header)
 
@@ -15,14 +15,14 @@ A directive that provides a very basic implementation of a "sticky header" for H
 ```HTML
 <html>
   <head>
-    <link rel="stylesheet" href="solnet-angular-sticky-table-header.css" />
+    <link rel="stylesheet" href="sn-sticky-table-header.css" />
   </head>
   <body ng-app="yourApp">
-    <table solnet-angular-sticky-table-header>
+    <table sn-sticky-table-header>
       ...
     <table>
     
-    <script src="solnet-angular-sticky-table-header.js"></script>
+    <script src="sn-sticky-table-header.js"></script>
   </body>
 </html>
 ```
