@@ -78,7 +78,7 @@
                             },
 
                             destroy: function() {
-                                angular.element($window).off(scope.scroll);
+                                angular.element($window).unbind('scroll', scope.scroll);
                             }
                         });
 
