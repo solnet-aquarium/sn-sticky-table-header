@@ -6,7 +6,7 @@ describe('Solnet Angular Sticky Table Header', function() {
         CLONE: 'CLONE',
         CLONE_VISIBLE: 'CLONE_VISIBLE'
     };
-    var $window, scrollFunction, element;
+    var $window, scrollFunction, element, scope;
 
     var angularElementMock = {
         scrollTop: function() {
@@ -49,26 +49,16 @@ describe('Solnet Angular Sticky Table Header', function() {
     });
 
     describe('#destroy', function() {
-        it('should be called when $destroy event is triggered', inject(function() {
+        it('should remove the "scroll" event from the $window on destroy', inject(function() {
             spyOn(angular, 'element').and.callFake(function() {
                 return {
+                    unbind: function(a, b) {
+                        expect(a).toEqual('scroll')
+                    },
                     off: function() {}
                 };
             });
             scope.$destroy();
-
-            expect(angular.element).toHaveBeenCalledWith($window);
-        }));
-
-        it('should remove the "scroll" event from the $window on destroy', inject(function() {
-            spyOn(angular, 'element').and.callFake(function() {
-                return {
-                    off: function() {}
-                };
-            });
-            scope.destroy();
-
-            expect(angular.element).toHaveBeenCalledWith($window);
         }));
     });
 
