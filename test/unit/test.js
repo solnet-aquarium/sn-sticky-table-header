@@ -53,7 +53,7 @@ describe('Solnet Angular Sticky Table Header', function() {
             spyOn(angular, 'element').and.callFake(function() {
                 return {
                     unbind: function(a, b) {
-                        expect(a).toEqual('scroll')
+                        expect(a).toEqual('scroll');
                     },
                     off: function() {}
                 };
