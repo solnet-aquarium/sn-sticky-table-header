@@ -1,4 +1,5 @@
-/*jshint loopfunc: true */
+/* @flow */
+/* jshint loopfunc: true */
 (function() {
 
     angular.module('snStickyTableHeader', [])
@@ -24,7 +25,7 @@
                             },
 
                             scroll: function(event) {
-                                var scrollTop = angular.element($window).scrollTop();
+                                var scrollTop = $($window).scrollTop();
 
                                 if (!scope.thead.hasClass(options.STICKY) && scrollTop > scope.table.offset().top) {
                                     scope.stick();
@@ -69,10 +70,10 @@
                             },
 
                             styleClone: function() {
-                                th = scope.thead.find('th');
+                                var th = scope.thead.find('th');
                                 angular.forEach(scope.clone.find('th'), function(thClone, thCloneIndex) {
                                     angular.element(thClone).css({
-                                        width: angular.element(th.get(thCloneIndex)).width()
+                                        width: $(th.get(thCloneIndex)).width()
                                     });
                                 });
                             },
