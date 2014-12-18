@@ -68,15 +68,8 @@ describe('Solnet Angular Sticky Table Header', function() {
         }));
 
         it('should call #stick if the window has been scrolled such that the top of the table is no longer visible', inject(function() {
-            spyOn(angular, 'element').and.callFake(function() {
-                return angular.extend({}, angularElementMock, {
-                    scrollTop: function() {
-                        return 100;
-                    }
-                });
-            });
-
             spyOn(scope, 'stick').and.callThrough();
+            window.scrollTo(0, 10);
             scope.scroll();
             expect(scope.stick).toHaveBeenCalled();
         }));
