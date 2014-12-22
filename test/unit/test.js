@@ -85,9 +85,9 @@ describe('Solnet Angular Sticky Table Header', function() {
     });
 
     describe('#stick', function() {
-        it('should add the correct class to the original thead', inject(function() {
+        it('should add the correct class to the original table', inject(function() {
             scope.stick();
-            expect(element.find('thead').hasClass(options.STICKY)).toBe(true);
+            expect(element.hasClass(options.STICKY)).toBe(true);
         }));
 
         it('should clone the table and apply the correct classes', inject(function() {
@@ -134,7 +134,7 @@ describe('Solnet Angular Sticky Table Header', function() {
     describe('#styleClone', function() {
         it('should set the width of the cloned table\'s th elements to be the same as the original', inject(function() {
             scope.stick();
-            th = scope.thead.find('th');
+            th = scope.table.find('th');
             angular.forEach(scope.clone.find('th'), function(thClone, thCloneIndex) {
                 expect(angular.element(thClone).width()).toBe(angular.element(th.get(thCloneIndex)).width());
             });
