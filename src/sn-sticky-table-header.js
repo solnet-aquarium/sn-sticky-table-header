@@ -16,7 +16,6 @@
                         var options = snStickyTableHeaderOptions;
 
                         angular.extend(scope, {
-                            thead: element.find('> :first-child'),
                             table: element,
                             clone: null,
 
@@ -27,11 +26,11 @@
                             scroll: function(event) {
                                 var scrollTop = $($window).scrollTop();
 
-                                if (!scope.thead.hasClass(options.STICKY) && scrollTop > scope.table.offset().top) {
+                                if (!scope.table.hasClass(options.STICKY) && scrollTop > scope.table.offset().top) {
                                     scope.stick();
                                 }
 
-                                if (scope.thead.hasClass(options.STICKY) && scrollTop <= scope.table.offset().top) {
+                                if (scope.table.hasClass(options.STICKY) && scrollTop <= scope.table.offset().top) {
                                     scope.unstick();
                                 }
 
@@ -46,11 +45,11 @@
 
                                 scope.styleClone();
                                 scope.clone.addClass(options.CLONE + ' ' + options.CLONE_VISIBLE);
-                                scope.thead.addClass(options.STICKY);
+                                scope.table.addClass(options.STICKY);
                             },
 
                             unstick: function() {
-                                scope.thead.removeClass(options.STICKY);
+                                scope.table.removeClass(options.STICKY);
                                 scope.clone.removeClass(options.CLONE_VISIBLE);
                             },
 
@@ -70,7 +69,7 @@
                             },
 
                             styleClone: function() {
-                                var th = scope.thead.find('th');
+                                var th = scope.table.find('th');
                                 angular.forEach(scope.clone.find('th'), function(thClone, thCloneIndex) {
                                     angular.element(thClone).css({
                                         width: $(th.get(thCloneIndex)).width()
