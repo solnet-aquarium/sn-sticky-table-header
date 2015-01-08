@@ -1,0 +1,10 @@
+[ignore]
+test/
+
+[include]
+src/
+
+[libs]
+/bower_components/flow-interfaces-angular/interfaces
+
+[options]
