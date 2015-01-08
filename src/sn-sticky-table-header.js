@@ -1,7 +1,6 @@
 /* @flow */
 /* jshint loopfunc: true */
 (function() {
-
     angular.module('snStickyTableHeader', [])
         .value('snStickyTableHeaderOptions', {
             STICKY: 'sn-sticky-table-header__original',
