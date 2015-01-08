@@ -41,7 +41,14 @@ describe('Solnet Angular Sticky Table Header', function() {
 
     describe('#initialise', function() {
         it('should bind the "scroll" event to the $window', inject(function() {
-            spyOn(angular, 'element').and.callThrough();
+            spyOn(angular, 'element').and.callFake(function() {
+                return {
+                    bind: function(a, b) {
+                        expect(a).toEqual('scroll resize');
+                    },
+                    off: function() {}
+                };
+            });
             scope.initialise();
 
             expect(angular.element).toHaveBeenCalledWith($window);
@@ -53,7 +60,7 @@ describe('Solnet Angular Sticky Table Header', function() {
             spyOn(angular, 'element').and.callFake(function() {
                 return {
                     unbind: function(a, b) {
-                        expect(a).toEqual('scroll');
+                        expect(a).toEqual('scroll resize');
                     },
                     off: function() {}
                 };
@@ -70,7 +77,7 @@ describe('Solnet Angular Sticky Table Header', function() {
         it('should call #stick if the window has been scrolled such that the top of the table is no longer visible', inject(function() {
             spyOn($.prototype, 'scrollTop').and.callFake(function() {
                 return 100;
-            })
+            });
             spyOn(scope, 'stick').and.callThrough();
             scope.scroll();
             expect(scope.stick).toHaveBeenCalled();
