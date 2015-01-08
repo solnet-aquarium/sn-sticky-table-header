@@ -20,7 +20,7 @@
                             clone: null,
 
                             initialise: function() {
-                                angular.element($window).bind('scroll', scope.scroll);
+                                angular.element($window).bind('scroll resize', scope.scroll);
                             },
 
                             scroll: function(event) {
@@ -78,7 +78,7 @@
                             },
 
                             destroy: function() {
-                                angular.element($window).unbind('scroll', scope.scroll);
+                                angular.element($window).unbind('scroll resize', scope.scroll);
                             }
                         });
 
