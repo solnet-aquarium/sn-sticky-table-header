@@ -1,7 +1,7 @@
 {
   "name": "sn-sticky-table-header",
   "main": "src/sn-sticky-table-header.js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/solnetdigital/sn-sticky-table-header",
   "authors": [
     "michael.robinson@solnet.co.nz"
