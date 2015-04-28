@@ -12,7 +12,9 @@ var fs = require('fs'),
   plumber = require('gulp-plumber'),
   open = require('gulp-open'),
   sass = require('gulp-sass'),
-  order = require("gulp-order");
+  order = require('gulp-order'),
+  webdriver_standalone = require('gulp-protractor').webdriver_standalone,
+  protractor = require('gulp-protractor').protractor;
 
 
 var config = {
@@ -39,7 +41,6 @@ gulp.task('watch', function() {
 });
 
 gulp.task('scripts', function() {
-
   function buildTemplates() {
     return gulp.src('src/**/*.html')
       .pipe(templateCache({
@@ -105,6 +106,21 @@ gulp.task('karma-serve', function(done) {
   }, done);
 });
 
+gulp.task('webdriver_standalone', webdriver_standalone);
+
+gulp.task('watch-protractor', function() {
+  gulp.watch(['./demo/*.html', './src/*.js', './demo/*.js'], ['html', 'scripts', 'protractor']);
+});
+
+gulp.task('protractor', function() {
+  gulp.src(['./test/protractor/*.js'])
+    .pipe(protractor({
+      configFile: 'protractor.js',
+      args: ['--baseUrl', 'http://127.0.0.1:8080'],
+      // seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.45.0.jar'
+    }));
+});
+
 function handleError(err) {
   console.log(err.toString());
   this.emit('end');
@@ -115,4 +131,6 @@ gulp.task('serve', ['build', 'connect', 'watch', 'open']);
 gulp.task('default', ['build', 'test']);
 gulp.task('test', ['build', 'karma']);
 gulp.task('serve-test', ['build', 'watch', 'karma-serve']);
+gulp.task('serve-protractor', ['build', 'connect', 'protractor', 'watch-protractor']);
+gulp.task('start-webdriver', ['webdriver_standalone']);
 
