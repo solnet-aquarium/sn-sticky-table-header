@@ -109,15 +109,16 @@ gulp.task('karma-serve', function(done) {
 gulp.task('webdriver_standalone', webdriver_standalone);
 
 gulp.task('watch-protractor', function() {
-  gulp.watch(['./demo/*.html', './src/*.js', './demo/*.js'], ['html', 'scripts', 'protractor']);
+  gulp.watch(['./src/*.js'], ['scripts']);
+  gulp.watch(['./**/*.scss'], ['styles']);
+  gulp.watch(['./demo/*.js', './demo/*.css'], ['protractor']);
 });
 
 gulp.task('protractor', function() {
   gulp.src(['./test/protractor/*.js'])
     .pipe(protractor({
       configFile: 'protractor.js',
-      args: ['--baseUrl', 'http://127.0.0.1:8080'],
-      // seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.45.0.jar'
+      args: ['--baseUrl', 'http://127.0.0.1:8080']
     }));
 });
 
