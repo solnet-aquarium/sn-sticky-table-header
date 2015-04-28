@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>sn-sticky-table-header demo</title>
+    <link rel="stylesheet" href="/demo/sn-sticky-table-header.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+
+    <!-- TODO: Include Angular from Bower components -->
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="sn-sticky-table-header.js"></script>
+
+    <style type="text/css" media="all">
+        th {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body ng-app="demo">
+    <div ng-controller="demoController">
+        <span id="data-loaded" ng-if="data.length"></span>
+        <table sn-sticky-table-header class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="datum in data">
+                    <td>{{ datum.id }}</td>
+                    <td>{{ datum.title }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
