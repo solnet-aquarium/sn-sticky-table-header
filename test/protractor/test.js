@@ -1,6 +1,6 @@
 describe('sn-sticky-table-header', function() {
   beforeEach(function() {
-    browser.get('http://localhost:8080/demo/index.html');
+    browser.get('http://web:8080/index.html');
   });
 
   it('should ensure the secondary thead is visible when the original is scrolled off the screen', function() {
