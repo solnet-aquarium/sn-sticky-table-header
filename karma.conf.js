@@ -27,6 +27,11 @@ module.exports = function(config) {
       }, {
         type: 'lcov',
         subdir: 'report-lcov'
+      },
+      {
+        type: 'text-summary',
+        subdir: 'report-summary',
+        file: 'text-summary.txt'
       }]
     }
   });
