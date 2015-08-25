@@ -1,7 +1,7 @@
 module.exports.config = {
   allScriptsTimeout: 11000,
-  specs: ['test/protractor/test.js']
-multiCapabilities: [{
+  specs: ['test/protractor/test.js'],
+  multiCapabilities: [{
     'browserName': 'chrome'
   }],
   framework: 'jasmine',
